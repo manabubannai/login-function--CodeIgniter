@@ -17,4 +17,9 @@ class Site extends CI_Controller {
 			die();
 		}
 	}
+
+	function logout(){
+		$this->session->sess_destroy();
+		$this->load->view("login_form");
+	}
 }
